@@ -23,5 +23,3 @@ class UserAdmin(BaseUserAdmin):
             'fields': ('email', 'password1', 'password2'),
         }),
     )
-
-    # add_form_template = 'admin/auth/user/add_form.html'

@@ -27,7 +27,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=150, blank=True)
     last_name = models.CharField(max_length=150, blank=True)
     is_active = models.BooleanField(default=True)
-    is_staff = models.BooleanField(default=False)  # Access to Django Admin
+    is_staff = models.BooleanField(default=False)  # access to Django Admin
 
     objects = UserManager()
 
