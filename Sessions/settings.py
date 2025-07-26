@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'SessionsApp'
 ]
 
 MIDDLEWARE = [
@@ -75,10 +76,16 @@ WSGI_APPLICATION = 'Sessions.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'sessionsapp',
+        'USER': 'root',
+        'PASSWORD': 'Password1!',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
+
+AUTH_USER_MODEL = "SessionsApp.User"
 
 
 # Password validation
