@@ -15,6 +15,7 @@ export class AppComponent {
 
   title = 'SessionsAppClient';
 
+  // TODO: this is just to make sure the client can reach the API; clean up when actually handling sessions
   pingAPI() {
       this.apiService.pingAPI().subscribe({
         next: (data) => console.log(`RESPONSE DATA: ${data}`),
